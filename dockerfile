@@ -48,7 +48,7 @@ RUN pip install --no-cache-dir -r GUI/requirements.txt
 COPY . .
 
 # Create required directories and set permissions
-RUN mkdir -p /app/Video /app/logs /app/data \
+RUN mkdir -p /app/Video /app/logs /app/data /app/.cache/arr \
              /home/appuser/.config && \
     chown -R appuser:appuser /app /home/appuser && \
     chmod -R 755 /app /home/appuser
